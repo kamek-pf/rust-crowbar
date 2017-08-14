@@ -1,3 +1,8 @@
 target
 Cargo.lock
 *.swp
+
+id_rsa
+build/id_rsa
+known_hosts
+build/known_hosts

@@ -8,6 +8,8 @@ eval "$(pyenv init -)"
     if [[ $# -gt 0 ]]; then
         yum install -y "$@"
     fi
+    eval `ssh-agent -s`
+    ssh-add
     . $HOME/.cargo/env
     cargo build ${CARGO_FLAGS:-} --release
 ) 1>&2
